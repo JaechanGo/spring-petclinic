@@ -46,6 +46,19 @@ import org.springframework.util.Assert;
 @Table(name = "owners")
 public class Owner extends Person {
 
+	public void setPets(List<Pet> pets) {
+		this.pets = pets;
+	}
+
+	public Integer getAge() {
+		return age;
+	}
+
+	public void setAge(Integer age) {
+		this.age = age;
+	}
+
+	private Integer age;
 	@Column(name = "address")
 	@NotEmpty
 	private String address;
