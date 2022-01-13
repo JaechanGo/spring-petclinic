@@ -20,7 +20,6 @@ import java.util.Map;
 
 import javax.validation.Valid;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -45,9 +44,10 @@ import org.springframework.web.servlet.ModelAndView;
 class OwnerController {
 
 	private static final String VIEWS_OWNER_CREATE_OR_UPDATE_FORM = "owners/createOrUpdateOwnerForm";
+
+
 	private final OwnerRepository owners;
 
-	@Autowired
 	public OwnerController(OwnerRepository clinicService) {
 		this.owners = clinicService;
 	}
